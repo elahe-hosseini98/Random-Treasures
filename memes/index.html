@@ -38,7 +38,7 @@
 
         const gallery = document.getElementById('meme-gallery');
 
-        for (let i = 1; i <= totalMemes; i++) {
+        for (let i = totalMemes; i >= 1; i--) {
             const img = document.createElement('img');
             img.src = `meme${i}.jpg`;
             img.alt = `Meme ${i}`;
