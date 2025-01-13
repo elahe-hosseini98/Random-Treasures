@@ -30,10 +30,20 @@
 </head>
 <body>
     <h1 style="text-align: center; width: 100%; padding: 10px;">Memes Gallery</h1>
-    <div class="gallery">
-        <img src="meme1.jpg" alt="Meme 1">
-        <img src="meme2.jpg" alt="Meme 2">
-        <img src="meme3.jpg" alt="Meme 3">
+    <div class="gallery" id="meme-gallery">
     </div>
+
+    <script>
+        const totalMemes = 30;
+
+        const gallery = document.getElementById('meme-gallery');
+
+        for (let i = 1; i <= totalMemes; i++) {
+            const img = document.createElement('img');
+            img.src = `meme${i}.jpg`;
+            img.alt = `Meme ${i}`;
+            gallery.appendChild(img);
+        }
+    </script>
 </body>
 </html>
