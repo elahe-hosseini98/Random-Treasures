@@ -34,13 +34,15 @@
     </div>
 
     <script>
-        const totalMemes = 30;
+        const totalMemes = 18;
+
+        const imagePath = 'images/';
 
         const gallery = document.getElementById('meme-gallery');
 
         for (let i = totalMemes; i >= 1; i--) {
             const img = document.createElement('img');
-            img.src = `meme${i}.jpg`;
+            img.src = `${imagePath}meme${i}.jpg`;
             img.alt = `Meme ${i}`;
             gallery.appendChild(img);
         }
