@@ -2,6 +2,11 @@
 
 Welcome to **RandomTreasures**! 🎉 This is a digital vault where I store all kinds of randomness. From memes that make me chuckle to heartfelt musings about life—this repository is a little bit of everything. 
 
+## Website 🌐
+You can explore all this randomness on my personal website:  
+👉 [Elaheh's RandomTreasures](https://elahe-hosseini98.github.io/Random-Treasures/)
+[![Website Preview](https://api.miniature.io/?url=https://elahe-hosseini98.github.io/Random-Treasures/&width=1024)](https://elahe-hosseini98.github.io/Random-Treasures/)
+
 ## What's Inside? 🤔
 - **Memes and Images**: A growing collection of my favorite memes, pictures, and random snaps.
 - **Blog Posts**: Thoughts, feelings, rants, and moments of introspection. Basically, my brain on digital paper.
