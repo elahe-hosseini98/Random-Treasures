@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memes Gallery</title>
     <link rel="stylesheet" href="./statics/style.css">
 </head>
+
 <body>
+    <button class="back-button" onclick="goBack()">
+        <span>&larr;</span>Back
+    </button>
+
     <h1>Memes Gallery</h1>
     <div class="gallery" id="meme-gallery"></div>
     
     <script>
+    function goBack() {
+            window.history.back();
+        }
+
     const imagePath = 'statics/images/';
     const gallery = document.getElementById('meme-gallery');
     const maxMemes = 51;
@@ -38,7 +48,8 @@
     }
 
     loadMemes();
-</script>
     </script>
+
 </body>
+
 </html>
