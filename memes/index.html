@@ -55,19 +55,36 @@
 <body>
     <h1>Memes Gallery</h1>
     <div class="gallery" id="meme-gallery"></div>
+    
     <script>
-        const totalMemes = 18;
-        const imagePath = 'images/';
-        const gallery = document.getElementById('meme-gallery');
+    const imagePath = 'images/';
+    const gallery = document.getElementById('meme-gallery');
+    const maxMemes = 51;
 
-        for (let i = totalMemes; i >= 1; i--) {
-            const img = document.createElement('img');
-            img.src = `${imagePath}meme${i}.jpg`;
-            img.alt = `Meme ${i}`;
-            gallery.appendChild(img);
+    async function checkAndAppendImage(memeNumber) {
+        const imageUrl = `${imagePath}meme${memeNumber}.jpg`;
+
+        try {
+            const response = await fetch(imageUrl, { method: 'HEAD' }); 
+            if (response.ok) {
+                const img = document.createElement('img');
+                img.src = imageUrl;
+                img.alt = `Meme ${memeNumber}`;
+                gallery.appendChild(img);
+            }
+        } catch (error) {
+            console.error(`Image not found: ${imageUrl}`);
         }
+    }
 
-         console.log("hiiii");
+    async function loadMemes() {
+        for (let i = maxMemes; i >= 1; i--) {
+            await checkAndAppendImage(i);
+        }
+    }
+
+    loadMemes();
+</script>
     </script>
 </body>
 </html>
