@@ -13,7 +13,7 @@
 }
 
 .back-button:hover {
-    background-color: #934a4a;
+    background-color: #a85656;
     transform: scale(1.05);
 }
 
@@ -56,5 +56,54 @@
     margin-left: 10px;
     margin-right: 10px;
     flex-shrink: 0;
-    border: 3px solid #934a4a
+    border: 3px solid #934a4a;
+}
+
+.content {
+    margin: 90px auto 20px;
+    padding: 40px;
+    max-width: 800px;
+    line-height: 1.8;
+    background-color: #ced0d1;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #934a4a;
+    margin-top: 20px;
+}
+
+.content p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: justify;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+.content a {
+    color: #934a4a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content a:hover {
+    text-decoration: underline;
+    color: #a85656;
+}
+
+.content img {
+    display: block;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
 }
