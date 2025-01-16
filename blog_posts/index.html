@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="./statics/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <button class="back-button" onclick="goBack()">
+            <span>&larr;</span>Back
+        </button>
+        <h1 class="header-title">Blog Posts</h1>
+        <img src="../memes/statics/images/prof_img.jpg" alt="Profile Picture" class="profile-picture">
+    </div>
+
+    <div class="post-list" id="post-list">
+        <!-- Dynamic blog post content will be inserted here -->
+    </div>
+
+    <script>
+      function goBack() {
+            window.history.back();
+      }
+
+      const posts = [
+          {
+              title: "Becoming self-aware without hating yourself!",
+              overview: "Becoming self-aware is about understanding your thoughts, emotions, and behaviors without falling into the trap of self-criticism. It’s a journey of growth rooted in compassion, where you learn to embrace your imperfections as opportunities for improvement, not as reasons for self-loathing.",
+              link: "./posts/post1.html",
+              image: "./posts/statics/post1/images/preview.jpg"
+          },
+      ];
+
+      const postList = document.getElementById('post-list');
+
+      posts.forEach(post => {
+          const postItem = document.createElement('div');
+          postItem.classList.add('post-item');
+
+          const postImage = document.createElement('img');
+          postImage.classList.add('post-image');
+          postImage.src = post.image;
+          postImage.alt = `Preview of ${post.title}`;
+
+          const postContent = document.createElement('div');
+          postContent.classList.add('post-content');
+
+          const postTitle = document.createElement('h2');
+          postTitle.classList.add('post-title');
+          postTitle.textContent = post.title;
+
+          const postOverview = document.createElement('p');
+          postOverview.classList.add('post-overview');
+          postOverview.textContent = post.overview;
+
+          const postLink = document.createElement('a');
+          postLink.classList.add('post-link');
+          postLink.href = post.link;
+          postLink.textContent = "Read More »";
+
+          postContent.appendChild(postTitle);
+          postContent.appendChild(postOverview);
+          postContent.appendChild(postLink);
+
+          postItem.appendChild(postImage);
+          postItem.appendChild(postContent);
+
+          postList.appendChild(postItem);
+      });
+    </script>
+</body>
+</html>

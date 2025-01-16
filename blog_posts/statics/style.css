@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #1e1e2e;
     color: #f8f9fa;
     margin: 0;
@@ -19,29 +19,61 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    background: #2b2b3c;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    max-width: 1200px;
+.post-list {
     width: 90%;
+    max-width: 800px;
+    margin: 80px 0 20px; /* Adjusted top margin to account for header height + 10px gap */
+    padding: 0;
 }
 
-.gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.post-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #2b2b3c;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+.post-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.post-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.post-content {
+    flex: 1;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    color: #934a4a;
+    margin: 0 0 10px;
+}
+
+.post-overview {
+    font-size: 1rem;
+    color: #f8f9fa;
+    margin: 0 0 10px;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #934a4a;
+    font-weight: bold;
+}
+
+.post-link:hover {
+    text-decoration: underline;
 }
 
 .back-button {
@@ -54,8 +86,8 @@ h1 {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
-    position: static; /* Keeps the button within the header layout */
-    flex-shrink: 0; /* Prevents the button from resizing */
+    position: static;
+    flex-shrink: 0;
 }
 
 .back-button:hover {
