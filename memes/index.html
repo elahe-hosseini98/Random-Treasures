@@ -17,40 +17,46 @@
         <img src="./statics/images/prof_img.jpg" alt="Profile Picture" class="profile-picture">
     </div>
 
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
     <div class="gallery" id="meme-gallery"></div>
-    
+
     <script>
-    function goBack() {
+        function goBack() {
             window.history.back();
         }
 
-    const imagePath = 'statics/images/';
-    const gallery = document.getElementById('meme-gallery');
-    const maxMemes = 51;
+        const imagePath = 'statics/images/';
+        const gallery = document.getElementById('meme-gallery');
+        const maxMemes = 51;
+        const loadingOverlay = document.getElementById('loading-overlay');
 
-    async function checkAndAppendImage(memeNumber) {
-        const imageUrl = `${imagePath}meme${memeNumber}.jpg`;
+        async function checkAndAppendImage(memeNumber) {
+            const imageUrl = `${imagePath}meme${memeNumber}.jpg`;
 
-        try {
-            const response = await fetch(imageUrl, { method: 'HEAD' }); 
-            if (response.ok) {
-                const img = document.createElement('img');
-                img.src = imageUrl;
-                img.alt = `Meme ${memeNumber}`;
-                gallery.appendChild(img);
+            try {
+                const response = await fetch(imageUrl, { method: 'HEAD' });
+                if (response.ok) {
+                    const img = document.createElement('img');
+                    img.src = imageUrl;
+                    img.alt = `Meme ${memeNumber}`;
+                    gallery.appendChild(img);
+                }
+            } catch (error) {
+                console.error(`Image not found: ${imageUrl}`);
             }
-        } catch (error) {
-            console.error(`Image not found: ${imageUrl}`);
         }
-    }
 
-    async function loadMemes() {
-        for (let i = maxMemes; i >= 1; i--) {
-            await checkAndAppendImage(i);
+        async function loadMemes() {
+            for (let i = maxMemes; i >= 1; i--) {
+                await checkAndAppendImage(i);
+            }
+            loadingOverlay.style.display = 'none';
         }
-    }
 
-    loadMemes();
+        loadMemes();
     </script>
 
 </body>
