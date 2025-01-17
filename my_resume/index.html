@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elahe Hosseini - Resume</title>
+    <link rel="stylesheet" href="./statics/style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <button class="back-button" onclick="goBack()">
+            <span>&larr;</span>Back
+        </button>
+        <div class="header-content">
+            <h1>Elahe Hosseini</h1>
+        </div>
+        <img src="../statics/images/prof_img.jpg" alt="Profile Picture" class="profile-picture">
+    </div>
+
+    <!-- Main Resume Section -->
+    <div class="resume-container">
+        <!-- Contact Information -->
+        <div class="intro">
+            <h2>Contact Information</h2>
+            <div class="contact-card">
+                <p><strong>Email:</strong> <a href="mailto:elahe.s.hs98@gmail.com">elahe.s.hs98@gmail.com</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/elahe-hosseini98" target="_blank">github.com/elahe-hosseini98</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/elahe-hosseini-5a018a13a" target="_blank">linkedin.com/in/elahe-hosseini</a></p>
+                <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=e_HZ8PQAAAAJ" target="_blank">scholar.google.com</a></p>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            <div class="card">
+                <h3>Master of Science (M.Sc.) in Artificial Intelligence</h3>
+                <p><strong>Institution:</strong> Kharazmi University, Tehran, Iran</p>
+                <p><strong>Duration:</strong> Oct 2021 - Feb 2024</p>
+                <p><strong>GPA:</strong> 3.53</p>
+                <p><strong>Thesis:</strong> Early Detection of ADHD with MRI Data</p>
+            </div>
+            <div class="card">
+                <h3>Bachelor of Science (B.Sc.) in Computer Engineering</h3>
+                <p><strong>Institution:</strong> Iran University of Science and Technology</p>
+                <p><strong>Duration:</strong> 2016 - 2021</p>
+                <p><strong>GPA:</strong> 3.1</p>
+                <p><strong>Thesis:</strong> Early Detection of Malware in IoT using Machine Learning</p>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section>
+            <h2>Work Experience</h2>
+            <div class="card">
+                <h3>Machine Learning Engineer</h3>
+                <p><strong>Company:</strong> RadialMedic, Tehran, Iran</p>
+                <p><strong>Duration:</strong> Dec 2022 - Aug 2023</p>
+                <ul>
+                    <li>Developed ML models for cuffless blood pressure monitoring.</li>
+                    <li>Processed ECG, PPG, and IMU signals.</li>
+                    <li>Achieved IEEE-standard accuracy through collaboration.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Quality Assurance Engineer</h3>
+                <p><strong>Company:</strong> Adanic Company, Tehran, Iran</p>
+                <p><strong>Duration:</strong> Sep 2021 - Jun 2022</p>
+                <ul>
+                    <li>Tested and debugged banking software for Ayandeh Bank.</li>
+                    <li>Adapted to high-stakes debugging environments.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Machine Learning and Deep Learning</li>
+                <li>Image Processing (2D & 3D)</li>
+                <li>Object Detection, Tracking, and Segmentation</li>
+                <li>Proficient in Python, PyTorch, TensorFlow, Keras</li>
+                <li>Familiar with NLP and Transformers</li>
+                <li>Experience with Linux, Docker</li>
+            </ul>
+        </section>
+
+        <!-- Languages Section -->
+        <section>
+            <h2>Languages</h2>
+            <div class="card">
+                <p><strong>Persian:</strong> Native</p>
+                <p><strong>English:</strong> Professional Proficiency (IELTS Overall 7, Dec 2023)</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

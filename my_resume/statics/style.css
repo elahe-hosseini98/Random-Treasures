@@ -1,3 +1,11 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2e;
+    color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
 .back-button {
     background-color: #934a4a;
     color: #fff;
@@ -6,23 +14,12 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
-    position: static;
-    flex-shrink: 0;
 }
 
 .back-button:hover {
-    background-color: #a85656;
+    background-color: #7c3e3e;
     transform: scale(1.05);
-}
-
-.back-button:active {
-    transform: scale(0.95);
-}
-
-.back-button span {
-    margin-right: 8px;
 }
 
 .header {
@@ -56,54 +53,59 @@
     margin-left: 10px;
     margin-right: 10px;
     flex-shrink: 0;
-    border: 3px solid #934a4a;
+    border: 3px solid #934a4a
 }
 
-.content {
-    margin: 90px auto 20px;
-    padding: 40px;
+.resume-container {
+    margin: 100px auto 40px;
+    width: 90%;
     max-width: 800px;
-    line-height: 1.8;
-    background-color: #ced0d1;
+    background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
     color: #333;
 }
 
-.content h2 {
-    font-size: 1.8rem;
-    color: #934a4a;
-    margin-top: 20px;
+h2 {
+    color: #4f4f7d;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #934a4a;
+    padding-bottom: 5px;
 }
 
-.content p {
-    margin: 20px 0;
-    font-size: 1.2rem;
-    color: #333;
-    text-align: justify;
+.card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-.content p:last-child {
-    margin-bottom: 0;
+ul.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
 }
 
-.content a {
+.skills-list li {
+    background: #4f4f7d;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
     color: #934a4a;
     text-decoration: none;
     font-weight: bold;
 }
 
-.content a:hover {
+a:hover {
     text-decoration: underline;
-    color: #a85656;
-}
-
-.content img {
-    display: block;
-    margin: 20px auto;
-    width: 60%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
-    height: auto;
 }
